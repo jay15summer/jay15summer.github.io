@@ -1,8 +1,9 @@
 ---
-layout: post
-title:  "Dealing with categorical variables in regression"
-categories: blog 
-tags: regression
+title:  Dealing with categorical variables in regression
+ctags:
+  - basic theories
+  - regression
+  - categorical variable
 ---
 ## 1. Brief introduction
 
@@ -18,7 +19,7 @@ For example, given a categorical variable having three classes: “faculty”, �
 
 The categorical variable is dummy coded as three dummy variables: dv_1, dv_2, and dv_3.
 
-Usually, people will select a category as the reference category in the regression process to avoid rank deficiency. For example, if “faculty” is chosen as the reference category, the new dummy coded variables become: 
+Usually, people will select a category as the reference category in the regression process to avoid rank deficiency. For example, if “faculty” is chosen as the reference category, the new dummy coded variables become:
 
 |         | dv_1 | dv_2 |
 |---------|------|------|
@@ -28,8 +29,8 @@ Usually, people will select a category as the reference category in the regressi
 
 ## 2. Dummy coding in Python using `pandas`
 
-```python
-# Create dataframe with categorical variable: [“status”: faculty, staff, student] 
+{% highlight python %}
+# Create dataframe with categorical variable: [“status”: faculty, staff, student]
 import pandas as pd
 data = pd.DataFrame({'status':['faculty','staff','student']})
 dv1 = pd.get_dummies(data)
@@ -38,7 +39,7 @@ print(dv1)
 data = pd.DataFrame({'gender':['M','F', 'M'], 'status':['faculty','staff','student']})
 dv2 = pd.get_dummies(data)
 print(dv2)
-```
+{% endhighlight %}
 <br>
 <table style="border-collapse:collapse;border-spacing:0"><tr><th style="font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;text-align:center" colspan="3">Output:</th></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;text-align:center" colspan="3">dv1</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;text-align:center">status_faculty</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;text-align:center">status_staff</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;text-align:center">status_student</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;text-align:center">1</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;text-align:center">0</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;text-align:center">0</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;text-align:center">0</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;text-align:center">1</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;text-align:center">0</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;text-align:center;vertical-align:top">0</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;text-align:center;vertical-align:top">0</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;text-align:center;vertical-align:top">1</td></tr></table>
 
@@ -46,14 +47,14 @@ print(dv2)
 
 ## 3. Dummy coding in Matlab
 
-```matlab
+{% highlight matlab %}
 % create categorical variable: ["status": faculty, staff, student]
 status = categorical({'faculty'; 'staff'; 'student'});
 dv_status = dummyvar(status)
 % if having another categorical variable: ["gender": M, F]
 gender = categorical({'M'; 'F'; 'M'});
 dv_gender_status = [dummyvar(gender) dummyvar(status)]
-```
+{% endhighlight %}
 <br>
 <pre class="codeoutput">
 dv_status =
@@ -73,9 +74,9 @@ dv_gender_status =
 ## 4. An example of using dummy coding for categorical regression
 
 Categorical regression using dummy coding can be done either manually or automatically in Matlab.
-The codes are shown respectively as follows which generate the same fitting results. 
+The codes are shown respectively as follows which generate the same fitting results.
 
-```matlab
+{% highlight matlab %}
 % 4.A Manually dummy coding
 load('carsmall')
 cars = table(MPG, Weight, Model_Year);
@@ -84,10 +85,10 @@ dv = dummyvar(cars.Model_Year);
 Model_Year1 = dv(:, 1); Model_Year2 = dv(:, 2); Model_Year3 = dv(:, 3);
 cars = table(MPG, Weight, Model_Year2, Model_Year3);
 fit = fitlm(cars, 'MPG~Weight*Model_Year2 + Weight*Model_Year3')
-```
+{% endhighlight %}
 <br>
 <pre class="codeputput">
-fit = 
+fit =
 
 Linear regression model:
     MPG ~ 1 + Weight*Model_Year2 + Weight*Model_Year3
@@ -104,16 +105,16 @@ Estimated Coefficients:
     Weight:Model_Year3     -0.0050551     0.0015636     -3.2329     0.0017256
 </pre>
 <br>
-```matlab
+{% highlight matlab %}
 % 4.B Automatic dummy coding via built-in matlab function
 load('carsmall')
 cars = table(MPG, Weight, Model_Year);
 cars.Model_Year = nominal(cars.Model_Year);
 fit = fitlm(cars, 'MPG~Weight*Model_Year')
-```
+{% endhighlight %}
 <br>
 <pre class="codeputput">
-fit = 
+fit =
 
 Linear regression model:
     MPG ~ 1 + Weight*Model_Year
@@ -129,5 +130,3 @@ Estimated Coefficients:
     Weight:Model_Year_76    -0.00082009    0.00085468    -0.95953       0.33992
     Weight:Model_Year_82     -0.0050551     0.0015636     -3.2329     0.0017256
 </pre>
-
-

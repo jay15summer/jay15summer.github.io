@@ -1,26 +1,27 @@
 ---
-layout: post
-title:  "Logistic Regression"
-categories: blog 
-tags: [regression, logistic regression, classification, basic theories]
+title:  Logistic regression
+tags:
+  - basic theories
+  - classification
+  - logistic regression
 ---
 Logistic regression is a regression model where the outcome is categorical (mostly binary).
 
-More concept and description can be found in [Wikipedia](https://en.wikipedia.org/wiki/Logistic_regression). Basically, the key part of logistic regression is: 
+More concept and description can be found in [Wikipedia](https://en.wikipedia.org/wiki/Logistic_regression). Basically, the key part of logistic regression is:
 
 <img src="https://latex.codecogs.com/gif.latex?log\frac{p(\mathbf{x})}{1-p(\mathbf{x})}=\beta_0&space;&plus;&space;\boldsymbol{\beta}\mathbf{x}" title="log\frac{p(\mathbf{x})}{1-p(\mathbf{x})}=\beta_0 + \boldsymbol{\beta}\mathbf{x}" />,
 
-where, <img src="https://latex.codecogs.com/gif.latex?p(\mathbf{x})&space;=&space;Pr(Y=1|X=\mathbf{x})" title="p(\mathbf{x}) = Pr(Y=1|X=\mathbf{x})" />. 
+where, <img src="https://latex.codecogs.com/gif.latex?p(\mathbf{x})&space;=&space;Pr(Y=1|X=\mathbf{x})" title="p(\mathbf{x}) = Pr(Y=1|X=\mathbf{x})" />.
 
 The logistic transformation makes both sides unbounded, thus avoiding nonsensical results.
- 
+
 Maximum likelihood estimation can be used to fitting the model and Newton’s method can be applied to the optimization.
- 
-Since the right-hand side of the regression equation is linear, logistic regression is considered to be a linear classifier. Its decision boundary can be clearly seen from the following figures. In the figures, three datasets are tested and the classification accuracy is 0.88, 0.42, and 0.97 respectively (source codes attached). Obviously, the decision boundary is linear. 
 
-![](https://github.com/jay15summer/jay15summer.github.io/blob/master/images/logistic-regression1.png?raw=true)
+Since the right-hand side of the regression equation is linear, logistic regression is considered to be a linear classifier. Its decision boundary can be clearly seen from the following figures. In the figures, three datasets are tested and the classification accuracy is 0.88, 0.42, and 0.97 respectively (source codes attached). Obviously, the decision boundary is linear.
 
-```python
+![](https://raw.githubusercontent.com/jay15summer/jay15summer.github.io/master/assets/images/logistic-regression1.png)
+
+{% highlight python %}
 # Decision boundaries of logistic regression
 import numpy as np
 import matplotlib.pyplot as plt
@@ -110,4 +111,4 @@ for ds in datasets:
 
 figure.subplots_adjust(left=.02, right=.98)
 plt.show()
-```
+{% endhighlight %}
