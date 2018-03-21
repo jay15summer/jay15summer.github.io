@@ -1,10 +1,14 @@
 ---
 title:  Dealing with categorical variables in regression
-ctags:
+tags:
   - basic theories
   - regression
   - categorical variable
 ---
+This post introduces dummy coding for categorical variables.
+
+<!--more-->
+
 ## 1. Brief introduction
 
 Under most situations, categorical variables cannot be entered directly into a regression model and be meaningfully interpreted. As a result, a common method dealing with categorical variables in regression is **Dummy Coding**. Dummy coding refers to the process of coding categorical variables into dichotomous variables ([Wikiversity](https://en.wikiversity.org/wiki/Dummy_variable_(statistics))).

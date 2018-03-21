@@ -7,6 +7,8 @@ tags:
 ---
 Logistic regression is a regression model where the outcome is categorical (mostly binary).
 
+<!--more-->
+
 More concept and description can be found in [Wikipedia](https://en.wikipedia.org/wiki/Logistic_regression). Basically, the key part of logistic regression is:
 
 <img src="https://latex.codecogs.com/gif.latex?log\frac{p(\mathbf{x})}{1-p(\mathbf{x})}=\beta_0&space;&plus;&space;\boldsymbol{\beta}\mathbf{x}" title="log\frac{p(\mathbf{x})}{1-p(\mathbf{x})}=\beta_0 + \boldsymbol{\beta}\mathbf{x}" />,
