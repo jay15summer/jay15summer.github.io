@@ -1,7 +1,7 @@
 - title: Home
   href: index.html
 
-- title: About
+- title: About me
   href: about.html
 
 - title: Posts
@@ -12,4 +12,3 @@
 
 - title: Portfolio
   href: list/portfolio.html
-
