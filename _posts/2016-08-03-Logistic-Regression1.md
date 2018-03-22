@@ -13,7 +13,7 @@ More concept and description can be found in [Wikipedia](https://en.wikipedia.or
 
 $$log\frac{p(\mathbf{x})}{1-p(\mathbf{x})}=\beta_0 + \boldsymbol{\beta}\mathbf{x},$$
 
-where, $$\beta$$ is a 
+where, $$\beta|$$ is a 
 
 The logistic transformation makes both sides unbounded, thus avoiding nonsensical results.
 
