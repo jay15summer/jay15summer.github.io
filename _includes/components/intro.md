@@ -1,1 +1,1 @@
-I joined FSU in Aug. 2014 as a Ph.D. student majoring in Industrial Engineering. I obtained my Bachelor degree in Industrial Engineering and a minor degree in Accounting both from Shanghai Jiao Tong University, Shanghai, China.
+I am currently a Ph.D. student majoring in Industrial Engineering at Florida State University. I obtained my Bachelor degree in Industrial Engineering and a minor degree in Accounting both from Shanghai Jiao Tong University, Shanghai, China.
