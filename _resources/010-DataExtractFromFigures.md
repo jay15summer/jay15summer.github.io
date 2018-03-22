@@ -1,6 +1,6 @@
 ---
 title: WebPlotDigitizer
-time: Feb 2018 - June 2018
+time: Feb 2018
 role: Research apps
 keywords:
   - research
