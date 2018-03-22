@@ -1,4 +1,4 @@
-{% include utilities/group-by-array.html collection=site.portfolio field="skills" %}
+{% include utilities/group-by-array.html collection=site.resources field="keywords" %}
 
 <div class="sticky-top space-before">
     <div class="card bg-light">
@@ -6,10 +6,10 @@
             <div class="card-title">
                 <h5>Filter by keywords</h5>
             </div>
-            {% for skill in group_names %}
-                <a class="d-inline-block bg-white border rounded p-1 mr-1 mb-1 skill skill-{{ skill | slugify }}"
-                   href="#{{ skill | slugify }}">
-                    {{skill}}
+            {% for keywords in group_names %}
+                <a class="d-inline-block bg-white border rounded p-1 mr-1 mb-1 keywords keywords-{{ keywords | slugify }}"
+                   href="#{{ keywords | slugify }}">
+                    {{keywords}}
                 </a>
             {% endfor %}
         </div>

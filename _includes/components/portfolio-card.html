@@ -1,18 +1,18 @@
 <div class="card card-portfolio w-100 border-top-0 border-left-0 border-right-0 rounded-0 mb-3">
     <div class="card-body px-0 pt-0 pb-2">
         <h4 class="card-title mb-4">
-            <a href="{{ site.baseurl }}{{ portfolio.url }}">{{ portfolio.title }}</a>
-             <span class="badge badge-success float-right">{{ portfolio.duration }}</span>
+            <a href="{{ site.baseurl }}{{ resources.url }}">{{ resources.title }}</a>
+             <span class="badge badge-success float-right">{{ resources.time }}</span>
         </h4>
         <h6 class="card-subtitle mb-3 text-secondary">
-            {{ portfolio.role }}
+            {{ resources.role }}
         </h6>
         <div class="card-text d-flex">
-            <b class="text-nowrap mb-1 mr-2 py-1">Skills:</b>
+            <b class="text-nowrap mb-1 mr-2 py-1">keywords:</b>
             <div>
-                {% for skill in portfolio.skills %}
-                    <span class="d-inline-block border rounded p-1 mr-1 mb-1 skill skill-{{ skill | slugify}}">
-                        {{skill}}
+                {% for keywords in resources.keywords %}
+                    <span class="d-inline-block border rounded p-1 mr-1 mb-1 keywords keywords-{{ keywords | slugify}}">
+                        {{keywords}}
                     </span>
                 {% endfor %}
             </div>
