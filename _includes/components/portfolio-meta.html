@@ -6,10 +6,10 @@
             </div>
             <div class="d-flex flex-wrap align-items-center">
                 <span class="mr-2 mb-1">Keywords:</span>
-                {% for skill in page.skills %}
-                    <a href="{{ site.baseurl }}{% link list/portfolio.html %}#{{ skill | slugify }}"
+                {% for keywords in page.keywords %}
+                    <a href="{{ site.baseurl }}{% link list/resources.html %}#{{ keywords | slugify }}"
                        class="bg-white border rounded p-1 mr-1 mb-1 d-inline-block">
-                        {{ skill }}
+                        {{ keywords }}
                     </a>
                 {% endfor %}
             </div>
@@ -17,7 +17,7 @@
                 <span class="icon grey mr-1">
                     {% include entypo/arrow-left.svg %}
                 </span>
-                <a href="{{ site.baseurl }}{% link list/portfolio.html %}">Back to resoures</a>
+                <a href="{{ site.baseurl }}{% link list/resources.html %}">Back to resoures</a>
             </div>
         </div>
     </div>
