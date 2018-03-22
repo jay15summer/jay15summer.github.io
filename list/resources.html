@@ -16,7 +16,7 @@ permalink: list/resources.html
     </h4>
 </div>
 
-{% assign sorted = site.portfolio | reverse %}
+{% assign sorted = site.resources | reverse %}
 
 {% for portfolio in sorted %}
     {% include components/portfolio-card.html %}
