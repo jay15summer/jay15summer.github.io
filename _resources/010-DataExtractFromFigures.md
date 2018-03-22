@@ -2,7 +2,7 @@
 title: WebPlotDigitizer
 time: Feb 2018
 role: Research
-skills:
+keywords:
   - research
   - websites
   - data generation
