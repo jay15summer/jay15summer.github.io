@@ -1,11 +1,11 @@
-- caption: GitHub @jay15summer
+- caption: Email me
+  href: mailto:jay15summer@gmail.com
+  icon: entypo/email.svg
+
+- caption: GitHub@jay15summer
   href: https://github.com/jay15summer
   icon: entypo/github.svg
 
 - caption: Google scholar
   href: https://scholar.google.com/citations?user=9pqclwIAAAAJ&hl=en&oi=ao
   icon: entypo/link.svg
-
-- caption: Email me
-  href: jay15summer@gmail.com
-  icon: entypo/email.svg
