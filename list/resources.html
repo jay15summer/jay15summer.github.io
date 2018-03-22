@@ -12,7 +12,7 @@ permalink: list/resources.html
     <h2 class="d-flex align-items-center mb-3">
         <span class="text-secondary mr-2">Showing everything matching:</span>
         <span class="border rounded p-2 mr-2 bg-light text-secondary" id="active-keywords"></span>
-        <a class="btn btn-primary btn-small" href="javascript:void(0)" onclick="clearSkills()">clear</a>
+        <a class="btn btn-primary btn-small" href="javascript:void(0)" onclick="clearkeywords()">clear</a>
     </h4>
 </div>
 
@@ -26,9 +26,9 @@ permalink: list/resources.html
 
     var parseHash = function() {
         if (document.location.hash.length > 0) {
-            var skill = document.location.hash.slice(1)
-            var name = $(".skill-" + skill).first().text()
-            showPortfolioBySkill(skill, name)
+            var keywords = document.location.hash.slice(1)
+            var name = $(".keywords-" + keywords).first().text()
+            showPortfolioBykeywords(keywords, name)
         }
         else {
             clearSkills()
@@ -39,27 +39,27 @@ permalink: list/resources.html
 
     $(window).on('hashchange', parseHash)
 
-    var showPortfolioBySkill = function(skill, name) {
+    var showPortfolioBykeywords = function(keywords, name) {
         $("#currently-showing").show()
         $(".card-portfolio").hide()
         $(".skill").removeClass("bg-warning")
             .addClass("bg-white")
             .removeClass("text-dark")
         $(".card-portfolio").each(function(idx, card) {
-            var matches = $(card).find(".skill-" + skill)
+            var matches = $(card).find(".keywords-" + keywords)
             if (matches.length > 0) $(card).show()
         })
-        $(".skill-" + skill).removeClass("bg-white")
+        $(".keywords-" + keywords).removeClass("bg-white")
             .addClass("bg-warning")
             .addClass("text-dark")
             .blur()
-        $("#active-skill").html(name)
+        $("#active-keywords").html(name)
     }
 
-    var clearSkills = function() {
+    var clearkeywords = function() {
         $("#currently-showing").hide()
         $(".card-portfolio").show()
-        $(".skill").removeClass("bg-warning")
+        $(".keywords").removeClass("bg-warning")
             .addClass("bg-white")
             .removeClass("text-dark")
         document.location.hash = ""
