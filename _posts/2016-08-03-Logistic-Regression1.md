@@ -11,9 +11,9 @@ Logistic regression is a regression model where the outcome is categorical (most
 
 More concept and description can be found in [Wikipedia](https://en.wikipedia.org/wiki/Logistic_regression). Basically, the key part of logistic regression is:
 
-\(log\frac{p(\mathbf{x})}{1-p(\mathbf{x})}=\beta_0 + \boldsymbol{\beta}\mathbf{x},\)
+$log\frac{p(\mathbf{x})}{1-p(\mathbf{x})}=\beta_0 + \boldsymbol{\beta}\mathbf{x},$
 
-where, \(p(\mathbf{x}) = Pr(Y=1|X=\mathbf{x}).$\)
+where, $p(\mathbf{x}) = Pr(Y=1|X=\mathbf{x}).$
 
 The logistic transformation makes both sides unbounded, thus avoiding nonsensical results.
 
