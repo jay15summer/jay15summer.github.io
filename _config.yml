@@ -16,17 +16,17 @@ avatar:           /theme/img/avatar.jpg   # Path to an avatar image
 # baseurl: "/jay15summer.github.io"
 
 # Add a directory to hold misc pages, just to keep the root directory clean.
-include: ["_pages", "_portfolio"]
+include: ["_pages", "_resources"]
 
 # Turn the projects into a collection.
 collections:
   projects:
     output: true
-    title: Projects
+    title: projects
     permalink: /:collection/:name.html
-  portfolio:
+  resources:
     output: true
-    title: portfolio
+    title: resources
     permalink: /:collection/:name.html
 
 defaults:
@@ -48,7 +48,7 @@ defaults:
       layout: defaults/post
   -
     scope:
-      path: "_portfolio"
+      path: "_resources"
     values:
       show_profile: false
       layout: defaults/portfolio
@@ -64,5 +64,3 @@ defaults:
     values:
       show_profile: false
       layout: defaults/list
-
-
