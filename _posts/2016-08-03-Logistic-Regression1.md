@@ -13,7 +13,7 @@ More concept and description can be found in [Wikipedia](https://en.wikipedia.or
 
 $$log\frac{p(\mathbf{x})}{1-p(\mathbf{x})}=\beta_0 + \boldsymbol{\beta}\mathbf{x},$$
 
-where, $$p(\mathbf{x}) = Pr(Y=1 \vert X=\mathbf{x}).$$ 
+where, $$p(\mathbf{x}) = Pr(Y=1 \vert X=\mathbf{x}).$$
 
 The logistic transformation makes both sides unbounded, thus avoiding nonsensical results.
 
@@ -21,7 +21,14 @@ Maximum likelihood estimation can be used to fitting the model and Newton’s me
 
 Since the right-hand side of the regression equation is linear, logistic regression is considered to be a linear classifier. Its decision boundary can be clearly seen from the following figures. In the figures, three datasets are tested and the classification accuracy is 0.88, 0.42, and 0.97 respectively (source codes attached). Obviously, the decision boundary is linear.
 
-![](https://raw.githubusercontent.com/jay15summer/jay15summer.github.io/master/assets/images/logistic-regression1.png)
+<div class="card mb-3">
+    <img class="card-img-top" src="https://raw.githubusercontent.com/jay15summer/jay15summer.github.io/master/assets/images/logistic-regression1.png"/>
+    <div class="card-body bg-light">
+        <div class="card-text">
+            Decision boundaries of logistic regression.
+        </div>
+    </div>
+</div>
 
 {% highlight python %}
 # Decision boundaries of logistic regression
