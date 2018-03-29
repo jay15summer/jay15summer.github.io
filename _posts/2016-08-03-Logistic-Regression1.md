@@ -19,7 +19,7 @@ The logistic transformation makes both sides unbounded, thus avoiding nonsensica
 
 Maximum likelihood estimation can be used to fitting the model and Newton’s method can be applied to the optimization.
 
-Since the right-hand side of the regression equation is linear, logistic regression is considered to be a linear classifier. Its decision boundary can be clearly seen from the following figures. In the figures, three datasets are tested and the classification accuracy is 0.88, 0.42, and 0.97 respectively (source codes attached). Obviously, the decision boundary is linear.
+Since the right-hand side of the regression equation is linear, logistic regression is considered to be a linear classifier. Its decision boundary can be clearly seen from the following figures. In the figures, three datasets are tested and the classification accuracy is 0.88, 0.42, and 0.97 respectively (Python codes attached). Obviously, the decision boundary is linear.
 
 <div class="card mb-3">
     <img class="card-img-top" src="https://raw.githubusercontent.com/jay15summer/jay15summer.github.io/master/assets/images/logistic-regression1.png"/>
