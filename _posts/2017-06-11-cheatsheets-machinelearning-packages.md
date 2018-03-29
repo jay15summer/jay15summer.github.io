@@ -9,6 +9,7 @@ tags:
 Several useful cheat sheets for machine learning and deep learning from github.
 
 <!--more-->
+
 [Original post link](https://startupsventurecapital.com/essential-cheat-sheets-for-machine-learning-and-deep-learning-researchers-efb6a8ebd2e5)
 
 [GitHub link](https://github.com/kailashahirwar/cheatsheets-ai)
