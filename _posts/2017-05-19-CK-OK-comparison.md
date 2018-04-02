@@ -2,6 +2,7 @@
 title: Is co-Kriging always better than ordinary Kriging?
 tags:
   - spatial statistics
+  - kriging
   - question
 ---
 A quick summary of the comparison between co-Kriging and ordinary Kriging.
