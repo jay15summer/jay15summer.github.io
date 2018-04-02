@@ -29,3 +29,6 @@ There is no rigorous definition of different Kriging methods and those methods a
 * **Regression Kriging (RK):**
 
    same condition with KED, but drift and residuals are fitted separately and then summed up.
+
+It is worth noting that to use RK and KED, auxiliary variables must be available at all the locations of interest (predicted locations). If auxiliary
+variables are only available at partial locations, CK is adopted instead. 
