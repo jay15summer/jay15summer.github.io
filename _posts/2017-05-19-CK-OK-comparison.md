@@ -38,12 +38,12 @@ auxiliary variables are available but not available at all grid-nodes, therefore
 * the sampling size and locations should affect the performance of CK a lot in real practice.
 
 A paper titled ["When Doesn't Cokriging Outperform Kriging"](https://arxiv.org/pdf/1507.08403.pdf) discussed the problem theoretically.
-The conclusion is that:
+The conclusions are
 * CK is identical to OK when the sampling locations of auxiliary variables is the same with or is a subset of locations where the
 response variable is observed.
 * CK might outperform OK when the auxiliary variable is observed at more locations than the response variable.
 
-The above conclusion is quite intuitive and not hard to understand. A case study using ``gstat`` package and the commonly used meuse data in R is conducted to validate the above conclusions.
+The above conclusions are quite intuitive and not hard to understand. A case study using ``gstat`` package with the commonly used "meuse" data in R is conducted to validate the above conclusions.
 
 (0). Select strongly correlated zinc (zn) and lead (pb) as response and covariate, respectively.
 {% highlight r %}
@@ -79,26 +79,26 @@ coordinates(meuse.train) = ~ x+y
 coordinates(meuse.test) = ~ x+y
 # 1.2 ordinary kriging for zinc
 # fit variogram
-ok.vgm = variogram(logzn~1, meuse.train)
-ok.fit = fit.variogram(ok.vgm, model = vgm(0.08,"Exp",800,0.03))
+ok.vgm <- variogram(logzn~1, meuse.train)
+ok.fit <- fit.variogram(ok.vgm, model = vgm(0.08,"Exp",800,0.03))
 plot(ok.vgm, ok.fit)
 # krige predict based on variogram
-ok.kriged = krige(logzn~1, meuse.train, meuse.test, model = ok.fit)
-RMSE.OK = sqrt(sum((meuse.test$logzn-ok.kriged$var1.pred)^2)/dim(meuse.test)[1])
+ok.kriged <- krige(logzn~1, meuse.train, meuse.test, model = ok.fit)
+RMSE.OK <- sqrt(sum((meuse.test$logzn-ok.kriged$var1.pred)^2)/dim(meuse.test)[1])
 # 1.3 co-Kriging for zinc
 ck.g <- gstat(id = "logzn", formula = logzn ~ 1, data = meuse.train)
 ck.g <- gstat(ck.g, id = "logpb", formula = logpb ~ 1, data = meuse.train)
 ck.g <- gstat(ck.g, model = vgm(0.08,"Exp",800,0.03), fill.all=T)
 ck.vario <- variogram(ck.g)
-ck.vario.fit = fit.lmc(ck.vario, ck.g, fit.method = 1)
+ck.vario.fit <- fit.lmc(ck.vario, ck.g, fit.method = 1)
 plot(ck.vario, ck.vario.fit)
 ck.pred <- predict(ck.vario.fit, newdata = meuse.test)
-RMSE.CK1 = sqrt(sum((meuse.test$logzn-ck.pred$logzn.pred)^2)/dim(meuse.test)[1])
+RMSE.CK1 <- sqrt(sum((meuse.test$logzn-ck.pred$logzn.pred)^2)/dim(meuse.test)[1])
 {% endhighlight %}
 
 (2). Conduct another sampling for lead and make it have more samples than zinc.
 The prediction RMSE is RMSE.CK2 = 0.087 which is much smaller than the previous OK and CK prediction.
-Therefore, for this case, CK outperforms OK when the covariate is sampled more dense than the response.
+Therefore, for this case, CK outperforms OK when the covariate is sampled with more density than the response.
 {% highlight r %}
 #======================================================================
 # 2. covariate lead are sampled to have more samples than response zinc
@@ -110,9 +110,9 @@ meuse.train_pb <- meuse[, c("x", "y", "logpb")]
 
 meuse.test <- meuse[setdiff(rownames(meuse), rownames(meuse.train_zn)),
                       c("x", "y", "logpb", "logzn")]
-coordinates(meuse.train_zn) <- ~ x+y
-coordinates(meuse.train_pb) <- ~ x+y
-coordinates(meuse.test) <- ~ x+y
+coordinates(meuse.train_zn) = ~ x+y
+coordinates(meuse.train_pb) = ~ x+y
+coordinates(meuse.test) = ~ x+y
 # 2.1 co-Kriging for zinc
 ck.g2 <- gstat(NULL, id = "logzn", formula = logzn ~ 1, data = meuse.train_zn)
 ck.g2 <- gstat(ck.g2, id = "logpb", formula = logpb ~ 1, data = meuse.train_pb)
@@ -121,13 +121,13 @@ ck.vario2 <- variogram(ck.g2)
 ck.vario2.fit <- fit.lmc(ck.vario2, ck.g2, fit.method = 1)
 plot(ck.vario2, ck.vario2.fit)
 ck.pred2 <- predict(ck.vario2.fit, newdata = meuse.test)
-RMSE.CK2 = sqrt(sum((meuse.test$logzn-ck.pred2$logzn.pred)^2)/dim(meuse.test)[1])
+RMSE.CK2 <- sqrt(sum((meuse.test$logzn-ck.pred2$logzn.pred)^2)/dim(meuse.test)[1])
 {% endhighlight %}
 
-(3). To visualize the difference, the prediction of OK, CK1, and CK2 are made on meuse.grid.  
+(3). To visualize the difference, predictions are made on "meuse.grid" data using OK, CK1, and CK2 respectively.  
 {% highlight r %}
 #==========================
-# 3. predict on meust.grid
+# 3. predict on meuse.grid
 #==========================
 coordinates(meuse.grid) = ~ x+y
 OK.grid <- krige(logzn~1, meuse.train, meuse.grid, model = ok.fit)
