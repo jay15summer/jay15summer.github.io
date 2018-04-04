@@ -33,7 +33,7 @@ The conclusion above is not strictly accurate or reliable for all situations, as
 
 Previous discussions focus on testing the influence of the correlation strength between covariates and response.
 However, considering that Kriging is to make predictions at unknown locations based on known sampling locations and
-[a previous post](https://jay15summer.github.io/2017/04/14/kriging-difference.htmlCK) mentions that CK is used when
+[a previous post](https://jay15summer.github.io/2017/04/14/kriging-difference.html) mentions that CK is used when
 auxiliary variables are available but not available at all grid-nodes, therefore,
 * the sampling size and locations should affect the performance of CK a lot in real practice.
 
@@ -168,4 +168,4 @@ grid.arrange(p1, p2, p3, nrow=2, ncol=2)
     </div>
 </div>
 As can be seen from the figure, OK prediction is almost the same as CK prediction1 when the sampling locations of zinc and lead are the same.
-When more lead data are sampled, CK prediction2 becomes quite differ from OK prediction and CK prediction1. 
+When more lead data are sampled, CK prediction2 becomes quite differ from OK prediction and CK prediction1.
