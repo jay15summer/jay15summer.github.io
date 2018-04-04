@@ -168,4 +168,4 @@ grid.arrange(p1, p2, p3, nrow=2, ncol=2)
     </div>
 </div>
 As can be seen from the figure, OK prediction is almost the same as CK prediction1 when the sampling locations of zinc and lead are the same.
-When more lead data are sampled, CK prediction2 becomes quite differ from OK prediction and CK prediction1.
+When more lead data are sampled, CK prediction2 becomes quite different from OK prediction and CK prediction1.
