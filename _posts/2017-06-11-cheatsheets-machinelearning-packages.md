@@ -17,7 +17,7 @@ for numeric processing and data visualization etc. E.g., R for Matlab users, Num
 
 ### 1.1 R cheat sheets
 * [This site](https://www.rstudio.com/resources/cheatsheets/) (RStudio resources) contains many useful cheat sheets for R and its packages.
-E.g., base R, advanced R, data import/transformation for R, ``Sparklyr`` package for Apache Spark, R Markdown, and ``ggplot2`` etc.
+E.g., base R, advanced R, data import/transformation for R, ``Sparklyr`` package for Apache Spark, ``Keras``, R Markdown, and ``ggplot2`` etc.
 
 ## 2. Machine learning cheat sheets
 * [A GitHub repository](https://github.com/kailashahirwar/cheatsheets-ai) gives cheat sheets of some commonly used Python/R packages/libraries
