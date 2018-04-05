@@ -49,6 +49,8 @@ The above conclusions are quite intuitive and not hard to understand. A case stu
 {% highlight r %}
 library(sp)
 library(gstat)
+library(ggplot2)
+library(lattice)
 library(gridExtra)
 #================
 # 0. load data
