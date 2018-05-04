@@ -68,12 +68,12 @@ To demonstrate the effectiveness of the above algorithm, a simulation case study
   [partition_all, partition_slt] = spatial_partition_reg(S, X, Y, h, v, T);
   {% endhighlight %}
 
-* The partitioning results and the increase percentage of SSE for every merging are as follows:
+* The partitioning results and the percentage of SSE increase for every merging are as follows:
   <div class="card mb-3">
       <img class="card-img-top" src="https://raw.githubusercontent.com/jay15summer/jay15summer.github.io/master/assets/images/spatial-partition-regression.png"/>
       <div class="card-body bg-light">
           <div class="card-text">
-              Spatial partitioned regions and increase percentage of SSE during merging process.
+              Spatial partitioned regions and the percentage of SSE increase during merging process.
           </div>
       </div>
   </div>
