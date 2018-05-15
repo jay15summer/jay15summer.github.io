@@ -129,7 +129,7 @@ ggplot()+
     </div>
 </div>
 
-* areal data: download and plot the GDP data of all the U.S. states in 2016 from [BEA](https://www.bea.gov/iTable/iTable.cfm?reqid=70&step=10&isuri=1&7003=200&7035=-1&7004=sic&7005=1&7006=xx&7036=-1&7001=1200&7002=1&7090=70&7007=-1&7093=levels#reqid=70&step=10&isuri=1&7003=200&7035=-1&7004=naics&7005=1&7006=xx&7036=-1&7001=1200&7002=1&7090=70&7007=-1&7093=levels)(The Bureau of Economic Analysis of the U.S. Department of Commerce)(the downloaded GDP data "gdp.csv" used in the following code is available [here](https://github.com/jay15summer/jay15summer.github.io/blob/master/assets/data/gdp.csv)):
+* areal data: download and plot the GDP data of all the U.S. states in 2016 from [BEA](https://www.bea.gov/iTable/iTable.cfm?reqid=70&step=10&isuri=1&7003=200&7035=-1&7004=sic&7005=1&7006=xx&7036=-1&7001=1200&7002=1&7090=70&7007=-1&7093=levels#reqid=70&step=10&isuri=1&7003=200&7035=-1&7004=naics&7005=1&7006=xx&7036=-1&7001=1200&7002=1&7090=70&7007=-1&7093=levels)(The Bureau of Economic Analysis of the U.S. Department of Commerce)(the downloaded GDP data "gdp.csv" used in the following code is available [here](https://github.com/jay15summer/jay15summer.github.io/blob/master/assets/data/gdp.csv) with direct downloading link [here](https://drive.google.com/file/d/1at3A5iZZ_zA7TlFMXhwk_AXx48aBQsJR/view?usp=sharing)):
 
 {% highlight r %}
 #==============areal data===============
@@ -155,6 +155,7 @@ ggplot()+
 </div>
 
 * path data: plot an navigation route from San Francisco to Los Angeles. The route data can be easily obtained from the "ggmap" package using function `trek`:
+
 {% highlight r %}
 #========obtain and plot path data using "ggmap"===============
 trek_df <- trek("san francisco, california", "los angeles, california", structure = "route")
