@@ -129,7 +129,7 @@ ggplot()+
     </div>
 </div>
 
-* areal data: download and plot the GDP data of all the U.S. states in 2016 from [BEA](https://www.bea.gov/iTable/iTable.cfm?reqid=70&step=10&isuri=1&7003=200&7035=-1&7004=sic&7005=1&7006=xx&7036=-1&7001=1200&7002=1&7090=70&7007=-1&7093=levels#reqid=70&step=10&isuri=1&7003=200&7035=-1&7004=naics&7005=1&7006=xx&7036=-1&7001=1200&7002=1&7090=70&7007=-1&7093=levels)(The Bureau of Economic Analysis of the U.S. Department of Commerce)(the downloaded GDP data "gdp.csv" used in the following code is available here):
+* areal data: download and plot the GDP data of all the U.S. states in 2016 from [BEA](https://www.bea.gov/iTable/iTable.cfm?reqid=70&step=10&isuri=1&7003=200&7035=-1&7004=sic&7005=1&7006=xx&7036=-1&7001=1200&7002=1&7090=70&7007=-1&7093=levels#reqid=70&step=10&isuri=1&7003=200&7035=-1&7004=naics&7005=1&7006=xx&7036=-1&7001=1200&7002=1&7090=70&7007=-1&7093=levels)(The Bureau of Economic Analysis of the U.S. Department of Commerce)(the downloaded GDP data "gdp.csv" used in the following code is available [here](https://github.com/jay15summer/jay15summer.github.io/blob/master/assets/data/gdp.csv)):
 
 {% highlight r %}
 #==============areal data===============
