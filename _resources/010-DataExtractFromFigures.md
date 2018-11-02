@@ -1,10 +1,10 @@
 ---
 title: WebPlotDigitizer
 time: Feb 2018
-role: Research apps
+role: Tools
 keywords:
   - research
-  - websites
+  - website
   - data generation
   - data extraction
 ---
