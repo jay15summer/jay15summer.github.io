@@ -1,5 +1,5 @@
 ---
-title: Spatial Modeling for Predicting the Leak Area of Surface Assembly
+title: Spatial Modeling for Predicting the Leak Area of Surface Assembly (summary not completed yet)
 ---
 [Link to the paper!](http://manufacturingscience.asmedigitalcollection.asme.org/article.aspx?articleid=2668591)
 ## 1. Problem description
