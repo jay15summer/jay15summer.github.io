@@ -18,19 +18,19 @@ My research focuses on **developing data models and algorithms to improve the qu
 * SAS
 
 ### Selected projects
-1. **Cloud data processing and modeling for IoT based additive manufacturing (3D printing).** (Jan.2018-Present)
-* Used IBM cloud to build infrastructure for collecting data from multiple sensors in different 3d printers/printing arms.
-* Adopted boosting (AdaBoost) based joint learning algorithms for modeling the data from multiple sources to improve the 3d printing accuracy.
+1. **Cloud data processing and modeling for IoT devices.** (Jan.2018-Present)
+* Used IBM cloud to build infrastructure for collecting data from multiple sensors (sensors on different 3d printers/printing arms).
+* Adopted boosting (AdaBoost) based joint learning algorithms for improving the model accuracy.
 * Studied online joint learning dealing with cloud data that arrive sequentially.
 
 2. **Multivariate modeling and variable selection for spatial non-stationary processes.** (Oct.2017-Apr.2018)
-* Used spatial adaptive network-based inference rule model, spatial varying coefficient model and spatial partition-wise regression model to characterize different types of non-stationary (spatially abrupt or gradual change relations).
+* Used spatial adaptive network-based inference rule model, spatial varying coefficient model, and a spatial partition-wise regression model to characterize different types of non-stationary (spatially abrupt or gradual change relations).
 * Proposed an efficient algorithm (greedy merging) for identifying the spatial boundary of non-stationarity.
 * Embedded lasso-type penalty for spatial variable selection either locally or globally.
 
 3. **Transfer learning for data-lacking process modeling.** (Jan.2017-Oct.2017)
-* Built regularization-based transfer learning algorithm for multiple models, e.g., geographically weighted regression model (varying coefficient model), region-wise regression model and adaptive network-based fuzzy inference model, to address the problem of lacking sufficient training data.
-* Proposed engineering knowledge (engineering effect equivalence) guided transfer learning algorithm to improve the modeling accuracy of the multivariate linear regression model with insufficient data.
+* Built regularization-based transfer learning algorithm for multiple models, e.g., additive Gaussian process model, to address the problem of lacking sufficient training data.
+* Proposed pre-knowledge (effect equivalence) guided transfer learning algorithm to improve the modeling accuracy of the multivariate linear regression model with insufficient data.
 * Applied the proposed transfer learning technique to model the machined surface variation and additive manufacturing printing errors for quality improvement.
 
 4. **Spatial leak modeling for surface assembly.** (Aug.2016-Apr.2017)
@@ -47,7 +47,7 @@ My research focuses on **developing data models and algorithms to improve the qu
 6. **Multi-task learning for spatial gaussian process additive model and its application to machined surface shape prediction.** (Dec.2014-Dec.2015)
 * Proposed an engineering knowledge incorporated Gaussian process additive model.
 * Proposed a novel multi-task learning algorithm to iteratively estimate the model parameters for multiple tasks simultaneously.
-* The proposed model was demonstrated to achieve better spatial prediction accuracy than traditional data-driven model without multi-task learning.
+* The proposed model was demonstrated to achieve better spatial prediction accuracy than the traditional data-driven model without multi-task learning.
 
 ### Activities and volunteer experience
 * Mentor for [RETREAT](http://eng.fsu.edu/retreat/) program at FSU.
@@ -68,8 +68,8 @@ My research focuses on **developing data models and algorithms to improve the qu
 * Wu, X., Miao, R., Li, Z., **Ren, J.**, Zhang, J., Jiang, Z. and Chu, X., 2015. Process monitoring research with various estimator-based MEWMA control charts. International Journal of Production Research, 53(14), pp.4337-4350. [Paper link](https://www.tandfonline.com/doi/abs/10.1080/00207543.2014.997406)
 
 ### Conference publications & presentations
-* **Ren, J.** and Wang, H. Process Variation Modeling and Monitoring for Interconnected Additive Manufacturing using Cloud Data. To be presented at INFORMS Annual Meeting, Phoenix, USA, 2018.
-* **Ren, J.** and Wang, H. Joint Process Modeling for Improving the Accuracy of Additive Manufacturing with Cloud Based Multiple Sources of Data. Presented at FACAM, University of Southern California, Los Angeles, USA, 2018. [FACAM link](http://facam-online.blogspot.com/2018/01/tentative-agenda-of-facam-2018-workshop.html) & [PPT link](https://drive.google.com/open?id=1bcdfYLQsMCpPqOruvXdqmeO8kpQ9yjxC)
-* **Ren, J.**, Park, C. and Wang, H. Stochastic Modeling and Diagnosis of Leak Areas for Surface Assembly. Presented at INFORMS Annual Meeting, Houston, USA, 2017. [PPT link](https://drive.google.com/open?id=17kcXvAAALErhui1FARqhkfUgRFX9lvH4)
-* **Ren, J.**, Wang, H. and Jin, X. Engineering Effect Equivalence Enabled Transfer Learning. Presented at IEEE Conference on Automation Science and Engineering, Xi'an, China, 2017. [Paper link](https://ieeexplore.ieee.org/abstract/document/8256262) & [PPT link](https://drive.google.com/open?id=1bzjH6_yCX5LedM1Zpf6uhNWkuGWS05RT)
-* **Ren, J.** and Wang, H. Surface Variation Modeling by Fusing Surface Measurement Data with Multiple Manufacturing Process Variables. Presented at ASME Manufacturing Science and Engineering Conference, Blacksburg, VA, USA, 2016. [Paper link](http://proceedings.asmedigitalcollection.asme.org/proceeding.aspx?articleid=2558745) & [PPT link](https://drive.google.com/open?id=1A382RLgher6EvzJmTfDvBmMLvBcEgcYc)
+* **Ren, J.** and Wang, H. Process Variation Modeling and Monitoring for Interconnected Additive Manufacturing using Cloud Data. Presented at the INFORMS Annual Meeting, Phoenix, USA, 2018.
+* **Ren, J.** and Wang, H. Joint Process Modeling for Improving the Accuracy of Additive Manufacturing with Cloud Based Multiple Sources of Data. Presented at the FACAM, University of Southern California, Los Angeles, USA, 2018. [FACAM link](http://facam-online.blogspot.com/2018/01/tentative-agenda-of-facam-2018-workshop.html) & [PPT link](https://drive.google.com/open?id=1bcdfYLQsMCpPqOruvXdqmeO8kpQ9yjxC)
+* **Ren, J.**, Park, C. and Wang, H. Stochastic Modeling and Diagnosis of Leak Areas for Surface Assembly. Presented at the INFORMS Annual Meeting, Houston, USA, 2017. [PPT link](https://drive.google.com/open?id=17kcXvAAALErhui1FARqhkfUgRFX9lvH4)
+* **Ren, J.**, Wang, H. and Jin, X. Engineering Effect Equivalence Enabled Transfer Learning. Presented at the IEEE Conference on Automation Science and Engineering, Xi'an, China, 2017. [Paper link](https://ieeexplore.ieee.org/abstract/document/8256262) & [PPT link](https://drive.google.com/open?id=1bzjH6_yCX5LedM1Zpf6uhNWkuGWS05RT)
+* **Ren, J.** and Wang, H. Surface Variation Modeling by Fusing Surface Measurement Data with Multiple Manufacturing Process Variables. Presented at the ASME Manufacturing Science and Engineering Conference, Blacksburg, VA, USA, 2016. [Paper link](http://proceedings.asmedigitalcollection.asme.org/proceeding.aspx?articleid=2558745) & [PPT link](https://drive.google.com/open?id=1A382RLgher6EvzJmTfDvBmMLvBcEgcYc)
